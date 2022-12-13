@@ -5,13 +5,12 @@ from .models import Post, Group
 
 class PostAdmin(admin.ModelAdmin):
     # Поля которые должны отображаться в админке
-    list_display = (
-        'pk',
-        'text',
-        'pub_date',
-        'author',
-        'group'
-        )
+    list_display = ('pk',
+                    'text',
+                    'pub_date',
+                    'author',
+                    'group'
+                    )
     list_editable = ('group',)
     # Интерфейс для поиска по списку постов
     search_fields = ('text',)
