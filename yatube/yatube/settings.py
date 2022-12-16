@@ -1,5 +1,7 @@
 import os
 
+EMPTY_VALUE_DISPLAY = '-пусто-'
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'bhp2v8#8^k8)@h011o8qo$&g(bhmu2^m1$th$d1$shfsv+$cfb'
@@ -84,5 +86,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, 'static'),
 ]

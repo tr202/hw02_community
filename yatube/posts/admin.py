@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import admin
 
 from .models import Group, Post
@@ -9,14 +10,14 @@ class PostAdmin(admin.ModelAdmin):
                     'text',
                     'pub_date',
                     'author',
-                    'group'
+                    'group',
                     )
     list_editable = ('group',)
     search_fields = ('text',)
     list_filter = ('pub_date',)
-    empty_value_display = '-пусто-'
+    empty_value_display = settings.EMPTY_VALUE_DISPLAY
 
 
 @admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ("title",)}
+    prepopulated_fields = {'slug': ('title',)}
